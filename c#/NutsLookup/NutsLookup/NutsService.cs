@@ -33,7 +33,7 @@ namespace NutsLookup
             File.Delete(tempFile);
         }
 
-        public string GetNutsCode(string alpha2, string zip)
+        public string? GetNutsCode(string alpha2, string zip)
         {
             using var cmd = memoryConn.CreateCommand();
             cmd.CommandText = "SELECT nuts_3 FROM nuts WHERE alpha_2 = @alpha2 AND zip = @zip";
